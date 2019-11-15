@@ -39,13 +39,13 @@
         <h3 class="modal-title" id="loginTitle">Welcome Back</h5>
       </div>
       <div class="modal-body">
-        <form>
+        <form action="authenticate.php" method="post">
           <div class="form-group">
             <div class="input-group">
               <div class="input-group-prepend">
                 <div class="input-group-text"><i class="fas fa-user"></i></div>
               </div>
-              <input type="text" class="form-control" placeholder="username">
+              <input type="text" class="form-control" placeholder="username" name="username">
             </div>
           </div>
 
@@ -54,7 +54,7 @@
               <div class="input-group-prepend">
                 <div class="input-group-text"><i class="fas fa-lock"></i></div>
               </div>
-              <input type="password" class="form-control" placeholder="password">
+              <input type="password" class="form-control" placeholder="password" name="password">
             </div>
             <small id="emailHelp" class="form-text"><a href="#">Forgot your password?</a></small>
           </div>
