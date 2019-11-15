@@ -24,4 +24,47 @@
       </li>
     </ul>
   </div>
+
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#loginModal">
+  login
+  </button>
 </nav>
+
+<!-- Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content bg-dark text-white overflow-hidden border-fix">
+      <div class="modal-header border-0">
+        <h3 class="modal-title" id="loginTitle">Welcome Back</h5>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <div class="input-group-text"><i class="fas fa-user"></i></div>
+              </div>
+              <input type="text" class="form-control" placeholder="username">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <div class="input-group-text"><i class="fas fa-lock"></i></div>
+              </div>
+              <input type="password" class="form-control" placeholder="password">
+            </div>
+            <small id="emailHelp" class="form-text"><a href="#">Forgot your password?</a></small>
+          </div>
+          <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="recuerdame">
+            <label class="form-check-label" for="recuerdame">Remember me</label>
+          </div>
+          <button type="submit" class="btn btn-block btn-primary">Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
