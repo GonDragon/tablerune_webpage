@@ -11,7 +11,7 @@
           <div class="d-md-flex flex-column justify-content-around col-lg-6">
             <h1>Tabletop Rol Online</h1>
             <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce at erat consequat, fringilla elit sit amet, rutrum purus. Nulla sed sapien pulvinar odio mattis sodales in eu est. Donec cursus sem metus, ac tempus massa consectetur eget.</p>
-            <a type="button" class="btn btn-primary btn-lg btn-block" href="./signup.php">Join</a>
+            <a class="btn btn-primary btn-lg btn-block" href="./signup.php" role="button"> Join</a>
           </div>
           <div class="media-section col-lg-6 my-3 my-lg-0">
             <img class="img-fluid" style="min-width: 100%;" src="tile-wide.png" alt="Logo">
