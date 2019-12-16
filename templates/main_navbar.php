@@ -26,9 +26,13 @@
   </div>
 
   <!-- Button trigger modal -->
+  <?php
+    if (!isset($_SESSION['userid'])) {
+  ?>
   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#loginModal">
   login
   </button>
+  
 </nav>
 
 <!-- Modal -->
@@ -68,3 +72,15 @@
     </div>
   </div>
 </div>
+
+<?php
+    } else {
+?>
+
+<a class="btn btn-primary" href="my_profile.php">
+  My profile
+</a>
+
+</nav>
+<?php
+    }

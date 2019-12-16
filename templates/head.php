@@ -1,3 +1,7 @@
+<?php
+include_once('sesion.php')
+?>
+
 <!doctype html>
 <html class="no-js" lang="es">
 
