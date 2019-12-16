@@ -1,33 +1,37 @@
 <?php
+  include_once("templates/commonFunctions.php");
   include_once("templates/head.php");
+
+  $wallpaper = getRandomWallpaper();
+  echo("
+	<style>
+		body {
+			background-image: url('img/backgrounds/$wallpaper') !important;
+			background-position: 50%;
+			background-size: cover;
+		}
+	</style>
+	");
 ?>
 <header>
 <?php include_once("templates/main_navbar.php"); ?>
 </header>
 <main>
 
-<div class="p-3">
-<h3>Registrate en el sitio</h3>		
-<form id="formRegistro" class="card w-25 p-3" action="new_user.php" method="post">
-	<label>
-		Username
-		<input type="text" name="username"/>
-	</label>
-	<label>
-        Password
-		<input type="password" name="password"/>
-	</label>
-	<label>
-		Email
-		<input type="email" name="email" />
-	</label>
-	<input type="submit" value="signup">
-</form>
-<p>
-Sos usuario?
-<a href="#">Ingresá</a>
-</p>
-</div>
+<?php
+
+include_once("templates/form.php");
+
+$fields = [
+	["username", "text"],
+	["password", "password"],
+	["email", "email"]
+];
+
+$signup = new SmallForm("Join Us!",$fields,"new_user.php","Register");
+$signup->build();
+
+?>
 
 </main>
 
