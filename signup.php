@@ -7,8 +7,11 @@
 	<style>
 		body {
 			background-image: url('img/backgrounds/$wallpaper') !important;
-			background-position: 50%;
-			background-size: cover;
+			background-color: black;
+			background-position: top;
+			background-size: 100%;
+			background-attachment: scroll;
+			background-repeat: no-repeat;
 		}
 	</style>
 	");
