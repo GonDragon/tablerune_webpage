@@ -16,7 +16,7 @@ class SmallForm
         ?>
 
     <div class="p-3 d-flex flex-column align-items-center">
-    <h3><?php echo($this->title) ?></h3>
+    <h3 class="text-light text-border"><?php echo($this->title) ?></h3>
 
     <?php echo("<form id='$this->submitname' class='card col-12 col-md-6 col-xl-3 p-3 m-auto' action='$this->destination' method='post'>");
 

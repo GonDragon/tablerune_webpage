@@ -1,6 +1,7 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <span class="navbar-brand mb-0 h1">TableRune</span>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top justify-content-between" style="z-index: 1000;">
+  <a href="index.php"><span class="navbar-brand mb-0 h1">TableRune</span></a>
 
+  <?php if(basename($_SERVER['PHP_SELF']) == 'index.php') { ?>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -8,23 +9,24 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="index.php">Home</a>
+        <a class="nav-link" href="#home">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Characteristics</a>
+        <a class="nav-link" href="#characteristics">Characteristics</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">For Players</a>
+        <a class="nav-link" href="#players">For Players</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">For GMs</a>
+        <a class="nav-link" href="#gms">For GMs</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
+        <a class="nav-link" href="#pricing">Pricing</a>
       </li>
     </ul>
   </div>
 
+  <?php } ?>
   <!-- Button trigger modal -->
   <?php
     if (!isset($_SESSION['userid'])) {
@@ -77,10 +79,23 @@
     } else {
 ?>
 
-<a class="btn btn-primary" href="my_profile">
-  My profile
-</a>
-
+<div>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myprofile">
+  My Profile
+</button>
+<a class="btn btn-danger" href="killsesion.php" role="button">Logout</a>
+</div>
+  
 </nav>
+
+
+<!-- Modal -->
+<div class="modal fade" id="myprofile" tabindex="-1" role="dialog" aria-labelledby="loginTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content bg-dark text-white overflow-hidden border-fix">
+      <?php include_once("templates/profilecard.php"); ?>
+    </div>
+  </div>
+</div>
 <?php
     }
